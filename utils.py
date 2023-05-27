@@ -20,8 +20,7 @@ def sorted_operation(data):
     for el in data:
         if 'date' in el:
             new_data.append(el)
-    return sorted(new_data, key=lambda d: d['date'])[-5:]
-
+    return sorted(new_data, key=lambda d: d['date'])
 
 
 
@@ -51,7 +50,6 @@ def masked_card_from(spisok):
                 i['from'] = "**" + number[-4:]
         except KeyError: pass
     return spisok
-
 
 def masked_account_from(spisok):
     """
